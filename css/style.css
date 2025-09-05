@@ -1,0 +1,79 @@
+:root{
+    --bg:#0b1220;
+    --panel:#121a2c;
+    --soft:#1b2740;
+    --text:#e7eefc;
+    --muted:#b6c2e2;
+    --accent:#46d6c8;
+    --accent-2:#7aa2ff;
+    --warn:#ffdf6b;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html,body{
+    margin:0;
+    background:radial-gradient(1200px 600px at 10% -10%, #0f1b33, transparent 60%), var(--bg);
+    color:var(--text);
+    font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{opacity:.9; text-decoration:underline}
+  .container{max-width:1100px; margin:0 auto; padding:24px}
+  header{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:6px 0 16px}
+  .logo{font-weight:800; letter-spacing:.5px; font-size:22px}
+  nav{display:flex; gap:18px; flex-wrap:wrap}
+  nav a{padding:8px 12px; background:linear-gradient(180deg, var(--soft), transparent); border-radius:10px}
+  .hero{display:grid; grid-template-columns: 1.2fr .9fr; gap:30px; margin-top:20px; align-items:center}
+  .card{background:linear-gradient(180deg, rgba(122,162,255,.08), rgba(70,214,200,.05) 60%), var(--panel); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow:var(--shadow)}
+  .intro{padding:24px}
+  .intro h1{margin:0 0 12px; font-size:34px}
+  .intro p{color:var(--muted); line-height:1.6}
+  .cta{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+  .btn{padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); color:var(--text); font-weight:600; cursor:pointer}
+  .btn.primary{background:linear-gradient(180deg,var(--accent),#2fb6aa); color:#031113; border:none}
+  .btn:hover{transform:translateY(-1px)}
+  .profile-wrap{position:relative; padding:20px}
+  .lamp-area{position:relative; display:flex; justify-content:center; align-items:flex-start; height:380px}
+  .lamp-svg{position:absolute; top:-10px; width:150px; height:220px; filter:drop-shadow(0 10px 20px rgba(0,0,0,.35))}
+  .beam{transition:opacity .35s ease; opacity:.15}
+  .beam.on{opacity:.85}
+  .profile{position:absolute; bottom:12px; width:82%; max-width:320px; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,.18); box-shadow:0 12px 40px rgba(0,0,0,.45); transition:filter .35s ease, transform .35s ease; filter:brightness(.55) saturate(.8)}
+  .profile.on{filter:brightness(1.08) saturate(1.05) drop-shadow(0 10px 24px rgba(255,223,107,.25)); transform:translateY(-2px)}
+  .toggle{display:flex; align-items:center; gap:10px; justify-content:center; margin-top:16px; color:var(--muted)}
+  .switch{position:relative; width:64px; height:34px; background:#1e2a47; border-radius:34px; border:1px solid rgba(255,255,255,.1); cursor:pointer}
+  .knob{position:absolute; top:3px; left:3px; width:28px; height:28px; background:var(--bg); border-radius:50%; transition:left .25s ease, background .25s; box-shadow: inset 0 0 0 2px rgba(255,255,255,.12)}
+  .switch.on .knob{left:33px; background:var(--warn)}
+  section{margin:38px 0}
+  section h2{font-size:24px; margin:0 0 14px}
+  .grid{display:grid; gap:18px}
+  .two{grid-template-columns:1fr 1fr}
+  .three{grid-template-columns:repeat(3, 1fr)}
+  .pill{display:inline-block; padding:8px 12px; border-radius:999px; background:#0f1629; border:1px solid rgba(255,255,255,.08); margin:6px 6px 0 0; color:var(--muted)}
+  ul{padding-left:18px}
+  .project{padding:18px}
+  .project h3{margin:0 0 6px; font-size:18px}
+  .cert{padding:16px}
+  .media{aspect-ratio:16/9; background:#0d1425; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,.12)}
+  footer{margin:40px 0 20px; color:var(--muted); text-align:center}
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .lamp-svg{top:-14px}
+    .profile{width:70%}
+  }
+  .profile {
+    position: absolute;
+    bottom: 12px;
+    width: 70%;          /* pehle 82% tha, kam kar diya */
+    max-width: 250px;    /* max size control */
+    height: 250px;       /* fixed height taaki lamba na ho */
+    object-fit: cover;   /* image ko crop-fit karega */
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 12px 40px rgba(0,0,0,.45);
+    transition: filter .35s ease, transform .35s ease;
+    filter: brightness(.55) saturate(.8);
+  }
+  
+  
